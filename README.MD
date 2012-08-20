@@ -17,6 +17,9 @@ Each widget is a self-contained piece of code that can simply be included via
 	
 There are also some predefined boilerplate pages and layouts that make the day-to-day work with 
 jekyll much easier. feel free to use and adapt them for your own blog.
+
+The HTML markup used in all files is HTML5. I tried to use it as semantically correct as possible.
+If you find any mistakes, please open an issue or fork & submit a pull request as fix.
 		
 	
 Getting started
@@ -81,11 +84,32 @@ Layout are located inside the `_layouts` folder.
 		Boilerplate base layout for all layouts.
 		
 	* **Index**
-		Index page renedring post list with pagination.
+		Index page rendering post list with pagination.
 		
 	* **Article**
 		Post page showing one post.
 		
+Snippets
+--------
+
+Some other useful code snippets, e.g. a boilerplate header, footer and sidebar etc. are located
+directly in the `_includes` directory. They provide a good starting point to build a blog.
+	
+	
+Contribution (Code of conduct)
+------------------------------
+
+**Contribution is highly encouraged**. If you think you found a great piece code that is useful
+for jekyll users, feel free to contribute!
+
+There are some rules though:
+	
+		* Do not spam-commit. Use a sensible # of commits.
+		* Split logical changes into separate commits, avoid gigantic commits.
+		* Write meaningful commit messages
+		* Avoid lines with more then 100 characters wherever possible.
+		* Use **tabs** for indentation, spaces for alignment.
+		* Do not harm anyone while using or contributing to this software
 		
 More information
 ----------------
