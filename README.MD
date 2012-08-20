@@ -50,7 +50,7 @@ Widgets are located inside the `_includes` folder.
 		A list containing similar posts.
 		Useful to provide some "Further reading" links to the user. Only works on post pages.
 		
-	* **Google Search box**
+	* **Google Search box** (widgets/googleSearchForm.html)
 		A very simple search box with an input field and submit button. searches via google.
 		TODO: Add JS-support to add site:my.domain to the query.
 		
@@ -72,8 +72,11 @@ Pages are located directly inside the root folder.
 		A page listing all posts grouped by year and month.
 		Has IDs in order to jump to a specif month or month-year combination directly.
 
-	* **Feed Page** (feed.xml)
-		Provides an RSS 2.0 Feed containing all posts.		
+	* **Full Feed Page** (fullFeed.xml)
+		Provides an RSS 2.0 Feed containing all posts.	
+		
+	* **Feed Page** (fullFeed.xml)
+		Provides an RSS 2.0 Feed containing the X latest posts. Defaults to 5.	
 		
 Layouts
 -------
@@ -83,11 +86,14 @@ Layout are located inside the `_layouts` folder.
 	* **Page** (page.html)
 		Boilerplate base layout for all layouts.
 		
-	* **Index**
+	* **Index** (index.html)
 		Index page rendering post list with pagination.
 		
-	* **Article**
+	* **Article** (article.html)
 		Post page showing one post.
+		
+	* **Feed** (feed.xml)
+		Base layout for RSS 2.0 feeds.
 		
 Snippets
 --------
