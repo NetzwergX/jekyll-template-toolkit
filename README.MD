@@ -33,24 +33,24 @@ You can copy-paste everything you need from the repo, but the recommended way is
 Widgets
 -------
 
-Widgets are located inside the `_includes` folder.
+Widgets are located inside the `_includes/jtt/widgets/` folder.
 
-	* **Category List** (widgets/categoryList.html)
+	* **Category List** (categoryList.html)
 		A simple list containing all categories and the number of posts in them.
 		Useful for navigations e.g. in sidebars.
 
-	* **Post Timeline** (widgets/timeLine.html)
+	* **Post Timeline** (timeLine.html)
 		A time line containing all month in which posts were published, grouped by year.
 		Useful for navigations e.g. in sidebars.
 
-	* **Tag Cloud** (widgets/tagCloud.html)
+	* **Tag Cloud** (tagCloud.html)
 		A linear weighted tag cloud. 
 		
-	* **Similar posts list** (widgets/similarPostList.html)
+	* **Similar posts list** (similarPostList.html)
 		A list containing similar posts.
 		Useful to provide some "Further reading" links to the user. Only works on post pages.
 		
-	* **Google Search box** (widgets/googleSearchForm.html)
+	* **Google Search box** (googleSearchForm.html)
 		A very simple search box with an input field and submit button. searches via google.
 		TODO: Add JS-support to add site:my.domain to the query.
 		
@@ -81,7 +81,7 @@ Pages are located directly inside the root folder.
 Layouts
 -------
 
-Layout are located inside the `_layouts` folder.
+Layout are located inside the `_layouts/jtt/` folder.
 
 	* **Page** (page.html)
 		Boilerplate base layout for all layouts.
@@ -95,12 +95,6 @@ Layout are located inside the `_layouts` folder.
 	* **Feed** (feed.xml)
 		Base layout for RSS 2.0 feeds.
 		
-Snippets
---------
-
-Some other useful code snippets, e.g. a boilerplate header, footer and sidebar etc. are located
-directly in the `_includes` directory. They provide a good starting point to build a blog.
-	
 	
 Contribution (Code of conduct)
 ------------------------------

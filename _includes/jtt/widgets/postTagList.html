@@ -1,0 +1,19 @@
+{% comment %}
+	Inline tag list for posts
+	
+	Author: Sebastian Teumert (<http://www.teumert.net>, <http://www.github.com/NetzwergX>)
+	Licensed under the MIT license (see LICENSE file).
+	
+	This tag list can be used to display the tags with which this post was tagged.
+	
+	For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-toolkit>.
+{% endcomment %}
+{% if post.tags.size > 0 %}
+	<ul class="inlineList tags">Tagged with:
+		{% for tag in post.tags %}
+			<li><a href="tags.html#{{tag | cgi_encode}}">{{ tag }}</a>
+			{% unless forloop.last %},{% endunless %}
+			</li>					
+		{% endfor %}
+	</ul>	
+{% endif %}		

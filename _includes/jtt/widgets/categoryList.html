@@ -1,0 +1,20 @@
+{% comment %}
+	Ordered category list with post count
+	
+	Author: Sebastian Teumert (<http://www.teumert.net>, <http://www.github.com/NetzwergX>)
+	Licensed under the MIT license (see LICENSE file).
+	
+	This category list can be used as navigation is sidebars or elsewhere. It renders a flat
+	list of categories and displays tthe number of posts in each category (can easily be hidden 
+	via CSS).
+	
+	For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-toolkit>.
+{% endcomment %}
+<nav>
+	<h5>Categories</h5>
+	<ul class="archive categories">
+	{% for category in site.categories %}
+		<li><a href="/categories.html#{{ category | first | cgi_escape}}">{{ category | first }} <span>({{ category | last | size }})</span></a></li>			
+	{% endfor %}
+	</ul>
+</nav>

@@ -1,0 +1,14 @@
+---
+layout: feed
+---
+{% for post in site.posts limit:5 %}
+	<item>
+		<title><![CDATA[{{ post.title }}]]></title>
+		<description>
+			<![CDATA[{{ post.excerpt }}]]>
+		</description>
+		<link><![CDATA[{{ post.url }}]]></link>
+		<author><![CDATA[{{ post.author }}]]></author>
+		<guid><![CDATA[{{ post.url }}]]></guid>
+	</item>
+{% endfor %}
