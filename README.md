@@ -35,65 +35,65 @@ Widgets
 
 Widgets are located inside the `_includes/jtt/widgets/` folder.
 
-	* **Category List** (categoryList.html)
-		A simple list containing all categories and the number of posts in them.
-		Useful for navigations e.g. in sidebars.
+* **Category List** (categoryList.html)
+	A simple list containing all categories and the number of posts in them.
+	Useful for navigations e.g. in sidebars.
 
-	* **Post Timeline** (timeLine.html)
-		A time line containing all month in which posts were published, grouped by year.
-		Useful for navigations e.g. in sidebars.
+* **Post Timeline** (timeLine.html)
+	A time line containing all month in which posts were published, grouped by year.
+	Useful for navigations e.g. in sidebars.
 
-	* **Tag Cloud** (tagCloud.html)
-		A linear weighted tag cloud. 
-		
-	* **Similar posts list** (similarPostList.html)
-		A list containing similar posts.
-		Useful to provide some "Further reading" links to the user. Only works on post pages.
-		
-	* **Google Search box** (googleSearchForm.html)
-		A very simple search box with an input field and submit button. searches via google.
-		TODO: Add JS-support to add site:my.domain to the query.
+* **Tag Cloud** (tagCloud.html)
+	A linear weighted tag cloud. 
+	
+* **Similar posts list** (similarPostList.html)
+	A list containing similar posts.
+	Useful to provide some "Further reading" links to the user. Only works on post pages.
+	
+* **Google Search box** (googleSearchForm.html)
+	A very simple search box with an input field and submit button. searches via google.
+	TODO: Add JS-support to add site:my.domain to the query.
 		
 Planned widgets (WIP)
 	
-	* **Tapir search box**
-		A search box for searching the site via Tapir (<http://tapirgo.com/>).	
+* **Tapir search box**
+	A search box for searching the site via Tapir (<http://tapirgo.com/>).	
 		
 Pages
 -----
 
 Pages are located directly inside the root folder.
 
-	* **Category Page** (categories.html)
-		A page listing all posts grouped by category.
-		Has IDs in order to jump to a specific category directly.
+* **Category Page** (categories.html)
+	A page listing all posts grouped by category.
+	Has IDs in order to jump to a specific category directly.
 
-	* **Archive Page** (archive.html)
-		A page listing all posts grouped by year and month.
-		Has IDs in order to jump to a specif month or month-year combination directly.
+* **Archive Page** (archive.html)
+	A page listing all posts grouped by year and month.
+	Has IDs in order to jump to a specif month or month-year combination directly.
 
-	* **Full Feed Page** (fullFeed.xml)
-		Provides an RSS 2.0 Feed containing all posts.	
-		
-	* **Feed Page** (fullFeed.xml)
-		Provides an RSS 2.0 Feed containing the X latest posts. Defaults to 5.	
+* **Full Feed Page** (fullFeed.xml)
+	Provides an RSS 2.0 Feed containing all posts.	
+	
+* **Feed Page** (fullFeed.xml)
+	Provides an RSS 2.0 Feed containing the X latest posts. Defaults to 5.	
 		
 Layouts
 -------
 
 Layout are located inside the `_layouts/jtt/` folder.
 
-	* **Page** (page.html)
-		Boilerplate base layout for all layouts.
-		
-	* **Index** (index.html)
-		Index page rendering post list with pagination.
-		
-	* **Article** (article.html)
-		Post page showing one post.
-		
-	* **Feed** (feed.xml)
-		Base layout for RSS 2.0 feeds.
+* **Page** (page.html)
+	Boilerplate base layout for all layouts.
+	
+* **Index** (index.html)
+	Index page rendering post list with pagination.
+	
+* **Article** (article.html)
+	Post page showing one post.
+	
+* **Feed** (feed.xml)
+	Base layout for RSS 2.0 feeds.
 		
 	
 Contribution (Code of conduct)
@@ -104,19 +104,18 @@ for jekyll users, feel free to contribute!
 
 There are some rules though:
 	
-		* Do not spam-commit. Use a sensible # of commits.
-		* Split logical changes into separate commits, avoid gigantic commits.
-		* Write meaningful commit messages
-		* Avoid lines with more then 100 characters wherever possible.
-		* Use **tabs** for indentation, spaces for alignment.
-		* Do not harm anyone while using or contributing to this software
+* Do not spam-commit. Use a sensible # of commits.
+* Split logical changes into separate commits, avoid gigantic commits.
+* Write meaningful commit messages
+* Avoid lines with more then 100 characters wherever possible.
+* Use **tabs** for indentation, spaces for alignment.
+* Do not harm anyone while using or contributing to this software
 		
 More information
 ----------------
 
-Updates on JTT and articles about blogging on github-pages can be found regularly on my blog:
-
-		<http://www.teumert.net>
+Updates on JTT and articles about blogging on github-pages can be found regularly
+[on my blog at teumert.net](http://www.teumert.net/).
 
 		
 License
