@@ -1,6 +1,6 @@
 ---
 layout: index
 ---
-***Index demo page**
+**Index demo page**
 
 Hello world!
