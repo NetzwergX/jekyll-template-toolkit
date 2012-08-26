@@ -13,7 +13,7 @@ You can confirm this locally by running
 
 Each widget is a self-contained piece of code that can simply be included via 
 
-	{% include widgets/widget.html %}. 
+		{% include widgets/widget.html %}. 
 	
 There are also some predefined boilerplate pages and layouts that make the day-to-day work with 
 jekyll much easier. feel free to use and adapt them for your own blog.
@@ -27,7 +27,7 @@ Getting started
 
 You can copy-paste everything you need from the repo, but the recommended way is to clone the repo via
 
-	git clone git://github.com/NetzwergX/jekyll-template-toolkit.git
+		git clone git://github.com/NetzwergX/jekyll-template-toolkit.git
 
 
 Widgets

@@ -1,5 +1,5 @@
 ---
-layout: feed
+layout: jtt/feed
 ---
 {% for post in site.posts limit:5 %}
 	<item>
