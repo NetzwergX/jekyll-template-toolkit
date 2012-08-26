@@ -33,7 +33,7 @@ You can copy-paste everything you need from the repo, but the recommended way is
 Widgets
 -------
 
-Widgets are located inside the `_includes/jtt/widgets/` folder.
+Widgets are located inside the `_includes/widgets/` folder.
 
 * **Category List** (categoryList.html)
 	A simple list containing all categories and the number of posts in them.
@@ -81,7 +81,7 @@ Pages are located directly inside the root folder.
 Layouts
 -------
 
-Layout are located inside the `_layouts/jtt/` folder.
+Layout are located inside the `_layouts/` folder.
 
 * **Page** (page.html)
 	Boilerplate base layout for all layouts.
