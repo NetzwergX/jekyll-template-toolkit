@@ -3,7 +3,7 @@ Jekyll Template Toolkit (JTT)
 
 A widget collection for vanilla jekyll, 100% compatible to github-pages.
 
-All widgets work in a vanilla jekyll installation, ensuring that a site that is built with these 
+All widgets / templates work in a vanilla jekyll installation, ensuring that a site that is built with these 
 templates can also sucessfully be built on GitHub. This makes JTT a very useful toolkit for the use
 with GitHub Pages.
 

@@ -4,13 +4,14 @@ layout: page
 <article class="box">
 	<header>
 		<time datetime="{{page.date | date: "%Y-%m-%d"}}" pubdate title="{{page.date | date: "%Y-%m-%d"}}">{{page.date | date: "%d.%m.%Y"}}</time>					
-		<h2><span>{{ page.title }}</span></h2>	
+		<h1><span>{{ page.title }}</span></h1>	
 	</header>
 	{{ page.excerpt | markdownify }}
 	<a id="more"></a>
 	{{ content}}
 	<footer>
-		{% include postCategoryList.html %}
-		{% include postTagList.html %}	
+		{% assign post = page % %}
+		{% include widgets/postCategoryList.html %}
+		{% include widgets/postTagList.html %}	
 	</footer>
 </article>

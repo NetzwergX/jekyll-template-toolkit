@@ -11,7 +11,7 @@
 	For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-toolkit>.
 {% endcomment %}
 <nav>
-	<h5>Categories</h5>
+	<h1>Categories</h1>
 	<ul class="archive categories">
 	{% for category in site.categories %}
 		<li><a href="/categories.html#{{ category | first | cgi_escape}}">{{ category | first }} <span>({{ category | last | size }})</span></a></li>			

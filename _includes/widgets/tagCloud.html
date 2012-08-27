@@ -13,27 +13,29 @@
 	
 	For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-toolkit>.
 {% endcomment %}
-<h5>Tags<span class="hint">({{site.tags.size}})</span></h5>	
-<style type="text/css" >
-	.tagCloud {
-		font-size: 0.8em;
-		list-style-type:none;
-	}
-	
-	.tagCloud li {
-		display: inline;
-	}
-</style>
-<ul class="tagCloud">
-   {% for tag in site.tags %}      
-   <li>
-   	<a href="tags.html#{{ tag | first | cgi_encode }}" 
-   	style="font-size:{{tag | last | size | times:100 | divided_by:site.tags.size | plus:100}}%">
-	{{ tag | first }} </a>
-	{% unless forloop.last %}, {% endunless %}
-</li>
-{% endfor %}    
-</ul>
+<section>
+	<h1>Tags<span class="hint">({{site.tags.size}})</span></h1>	
+	<style type="text/css" >
+		.tagCloud {
+			font-size: 0.8em;
+			list-style-type:none;
+		}
+		
+		.tagCloud li {
+			display: inline;
+		}
+	</style>
+	<ul class="tagCloud">
+	   {% for tag in site.tags %}      
+	   <li>
+	   	<a href="tags.html#{{ tag | first | cgi_encode }}" 
+	   	style="font-size:{{tag | last | size | times:100 | divided_by:site.tags.size | plus:100}}%">
+		{{ tag | first }} </a>
+		{% unless forloop.last %}, {% endunless %}
+	</li>
+	{% endfor %}    
+	</ul>
+</section>
 
     
    

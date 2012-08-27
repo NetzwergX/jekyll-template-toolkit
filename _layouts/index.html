@@ -1,20 +1,16 @@
 ---
 layout: page
 ---
-<p id="intro">
-	{{ content }}				
-</p>	
-
 {% for post in paginator.posts %}
   <article class="box">
   	<header>
 		<time datetime="{{post.date | date: "%Y-%m-%d"}}" pubdate title="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date: "%d.%m.%Y"}}</time>					
-		<h2><span><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></span></h2>
+		<h1><span><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></span></h1>
 	</header>	
 	{{ post.excerpt | markdownify }}
 	<footer>	
-		{% include postCategoryList.html %}
-		{% include postTagList.html %}	
+		{% include widgets/postCategoryList.html %}
+		{% include widgets/postTagList.html %}	
 		<p class="more" style="float:right; margin-top: -1.8em;"><a href="{{ post.url }}#more" title="Read more about '{{ post.title }}'">Read more &hellip;</a></p>
 	</footer>
 	</article>
