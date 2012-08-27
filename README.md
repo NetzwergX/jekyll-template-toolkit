@@ -51,8 +51,7 @@ Widgets are located inside the `_includes/widgets/` folder.
 	Useful to provide some "Further reading" links to the user. Only works on post pages.
 	
 * **Google Search box** (googleSearchForm.html)
-	A very simple search box with an input field and submit button. searches via google.
-	TODO: Add JS-support to add site:my.domain to the query.
+	A very simple search box with an input field and submit button. searches via google.	
 		
 Planned widgets (WIP)
 	
@@ -66,11 +65,15 @@ Pages are located directly inside the root folder.
 
 * **Category Page** (categories.html)
 	A page listing all posts grouped by category.
-	Has IDs in order to jump to a specific category directly.
+	Has anchors in order to jump to a specific category directly.
 
 * **Archive Page** (archive.html)
 	A page listing all posts grouped by year and month.
-	Has IDs in order to jump to a specif month or month-year combination directly.
+	Has anchors in order to jump to a specif month or month-year combination directly.
+	
+* **Tag Page** (tags.html)
+	A page listing all posts grouped by tags.
+	Provides anchors to jump to a specific tag easily.	
 
 * **Full Feed Page** (fullFeed.xml)
 	Provides an RSS 2.0 Feed containing all posts.	
