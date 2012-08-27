@@ -30,7 +30,7 @@
 	   <li>
 	   	<a href="tags.html#{{ tag | first | cgi_encode }}" 
 	   	style="font-size:{{tag | last | size | times:100 | divided_by:site.tags.size | plus:100}}%">
-		{{ tag | first }} </a>
+		{{ tag | first }}</a>
 		{% unless forloop.last %}, {% endunless %}
 	</li>
 	{% endfor %}    
