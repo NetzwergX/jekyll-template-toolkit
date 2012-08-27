@@ -2,22 +2,17 @@
 layout: page
 title: Categories
 ---
-<h1>Categories</h1>
-<p id="intro">This category page was crafted carefully in pure Liquid and does not use any jekyll plugins. Therefore it can be built using GitHub.</p>
-
-<!-- categories -->
-	
+<!-- categories -->	
 {% for category in site.categories %}
-	<div class="box">
-	<h2>{{ category | first }}<a name="{{ category | first | cgi_escape }}"></a></h2>
+<div class="box">
+	<h1>{{ category | first }}<a name="{{ category | first | cgi_escape }}"></a></h1>
 	<ul class="archive">	
 	{% for posts in category %}
       {% for post in posts %}
 		<li><a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }} <span>{{ post.date | date: '%d.%m.%y' }}</span></a></li>						
 	{% endfor %}{% endfor %}
 	</ul>
-	</div>
-				
+</div>				
 {% endfor %}
 	
 

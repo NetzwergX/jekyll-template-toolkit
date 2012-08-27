@@ -5,10 +5,18 @@ layout: feed
 	<item>
 		<title><![CDATA[{{ post.title }}]]></title>
 		<description>
-			<![CDATA[{{ post.excerpt }}]]>
+			<![CDATA[
+				{{ post.excerpt | markdownify }}
+				{% if post.categories.size > 0 %}						
+					<p>Posted in: {{ post.categories | array_to_sentence_string }}</p>
+				{% endif %}		
+				{% if post.tags.size > 0 %}
+					<p>Tagged with: {{ post.tags | array_to_sentence_string }}</p>
+				{% endif %}		
+			]]>
 		</description>
-		<link><![CDATA[{{ post.url }}]]></link>
-		<author><![CDATA[{{ post.author }}]]></author>
+		<link><![CDATA[{{site.url}}{{ post.url }}]]></link>
+		<author><![CDATA[{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}]]></author>
 		<guid><![CDATA[{{ post.url }}]]></guid>
 	</item>
 {% endfor %}

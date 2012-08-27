@@ -4,26 +4,20 @@ layout: feed
 {% for post in site.posts %}
 	<item>
 		<title><![CDATA[{{ post.title }}]]></title>
-		<description><![CDATA[
-			{{ post.excerpt}}
-			{% comment %}
-				Tags and categories are included here for better search results.
-			{% endcomment %}
-			{% if post.categories.size > 0 %}
-				Posted in:
-				{% for category in post.categories %}
-					{{ category }}{% unless forloop.last %},{% endunless %}
-				{% endfor %}
-			{% endif %}		
-			{% if post.tags.size > 0 %}
-				Tagged with:
-				{% for tag in post.tags %}
-					{{ tag }}{% unless forloop.last %},{% endunless %}				
-				{% endfor %}
-			{% endif %}				
-		]]></description>
-		<link><![CDATA[{{ post.url }}]]></link>
-		<author><![CDATA[{{ post.author }}]]></author>
+		<description>
+			<![CDATA[
+				{{ post.excerpt | markdownify }}
+				{{ post.content | markdownify }}
+				{% if post.categories.size > 0 %}						
+					<p>Posted in: {{ post.categories | array_to_sentence_string }}</p>
+				{% endif %}		
+				{% if post.tags.size > 0 %}
+					<p>Tagged with: {{ post.tags | array_to_sentence_string }}</p>
+				{% endif %}		
+			]]>
+		</description>
+		<link><![CDATA[{{site.url}}{{ post.url }}]]></link>
+		<author><![CDATA[{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}]]></author>
 		<guid><![CDATA[{{ post.url }}]]></guid>
 	</item>
 {% endfor %}
