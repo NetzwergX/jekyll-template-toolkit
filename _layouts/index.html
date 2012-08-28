@@ -4,7 +4,7 @@ layout: page
 {% for post in paginator.posts %}
   <article class="box">
   	<header>
-		<time datetime="{{post.date | date: "%Y-%m-%d"}}" pubdate title="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date: "%d.%m.%Y"}}</time>					
+		<time datetime="{{post.date | date: "%Y-%m-%d"}}" title="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date: "%d.%m.%Y"}}</time>					
 		<h1><span><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></span></h1>
 	</header>	
 	{{ post.excerpt | markdownify }}

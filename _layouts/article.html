@@ -3,7 +3,7 @@ layout: page
 ---
 <article class="box">
 	<header>
-		<time datetime="{{page.date | date: "%Y-%m-%d"}}" pubdate title="{{page.date | date: "%Y-%m-%d"}}">{{page.date | date: "%d.%m.%Y"}}</time>					
+		<time datetime="{{page.date | date: "%Y-%m-%d"}}" title="{{page.date | date: "%Y-%m-%d"}}">{{page.date | date: "%d.%m.%Y"}}</time>					
 		<h1><span>{{ page.title }}</span></h1>	
 	</header>
 	{{ page.excerpt | markdownify }}
