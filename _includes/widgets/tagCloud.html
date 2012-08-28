@@ -14,17 +14,7 @@
 	For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-toolkit>.
 {% endcomment %}
 <section>
-	<h1>Tags<span class="hint">({{site.tags.size}})</span></h1>	
-	<style type="text/css" >
-		.tagCloud {
-			font-size: 0.8em;
-			list-style-type:none;
-		}
-		
-		.tagCloud li {
-			display: inline;
-		}
-	</style>
+	<h1>Tags<span class="hint">({{site.tags.size}})</span></h1>		
 	<ul class="tagCloud">
 	   {% for tag in site.tags %}      
 	   <li>
