@@ -6,9 +6,9 @@ title: Archives
 {% for post in site.posts %}
 	{% unless post.next %}	
 		
-		<h1><a href="/archives.html#{{ post.date | date: '%Y' }}" name="{{ post.date | date: '%Y' }}">Articles in {{ post.date | date: '%Y' }}</a></h1>		
+		<h1><a href="/archives.html#{{ post.date | date: '%Y' }}" id="{{ post.date | date: '%Y' }}">Articles in {{ post.date | date: '%Y' }}</a></h1>		
 		<ul class="archive">
-			<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}" name="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a></li>
+			<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}" id="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a></li>
 			<li class="nested">
 				<ul>
 	{% else %}
@@ -23,9 +23,9 @@ title: Archives
 			</li></ul>
 			</div>
 			<div class="box">	
-				<h1><a href="/archives.html#{{ post.date | date: '%Y' }}" name="{{ post.date | date: '%Y' }}">Articles in {{ post.date | date: '%Y' }}</a></h1>		
+				<h1><a href="/archives.html#{{ post.date | date: '%Y' }}" id="{{ post.date | date: '%Y' }}">Articles in {{ post.date | date: '%Y' }}</a></h1>		
 				<ul class="archive">
-					<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}" name="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a></li>
+					<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}" id="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a></li>
 					<li class="nested">
 						<ul>
 							
@@ -33,7 +33,7 @@ title: Archives
 		{% if month != nmonth %} 
 				</ul>
 			</li>
-			<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}" name="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a></li>
+			<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}" id="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a></li>
 			<li class="nested">
 					<ul>
 		{% endif %}
