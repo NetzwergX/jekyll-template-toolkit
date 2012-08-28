@@ -11,7 +11,7 @@
 <section>
 	<nav>
 		<h1>Archive</h1>
-		<ul class="archive">
+		<ul class="postList archive">
 		{% for post in site.posts %}
 		
 			{% if post.next %}		
@@ -52,9 +52,7 @@
 								<ul>												
 					{% endif %}					
 		   {% endif %}	
-		   
-		   <li><a href="/{{ post.url }}">{{ post.title }}</a></li>		
-		   		
+		   {% comment %}<li><a href="/{{ post.url }}">{{ post.title }}</a></li>	{% endcomment %}		   		
 		{% endfor %}
 								</ul>
 							</li>						
