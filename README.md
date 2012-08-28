@@ -28,6 +28,9 @@ Getting started
 You can copy-paste everything you need from the repo, but the recommended way is to clone the repo via
 
 		git clone git://github.com/NetzwergX/jekyll-template-toolkit.git
+		
+The latest code is kept in the `jtt-source` branch. This avoids conflicts with the `master` branch when 
+you are trying to create user pages.
 
 
 Widgets
