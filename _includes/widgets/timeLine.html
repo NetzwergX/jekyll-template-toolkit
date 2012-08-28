@@ -53,7 +53,7 @@
 			{% if forloop.first %}				
 					<!-- year -->
 					<li><a href="/archives.html#{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a>				
-						<ul class="archive">
+						<ul>
 							<!-- month -->
 							<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a>							
 								<ul>			
@@ -68,7 +68,7 @@
 					<!-- /year -->
 					<!-- year -->
 					<li><a href="/archives.html#{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a>				
-						<ul class="archive">
+						<ul>
 							<!-- month -->
 							<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a>							
 								<ul>		
