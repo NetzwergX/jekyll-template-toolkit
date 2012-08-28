@@ -2,51 +2,56 @@
 layout: page
 title: Archives
 ---
-<div class="box">	
-{% for post in site.posts %}
-	{% unless post.next %}	
+<section>		
+		{% for post in site.posts %}
 		
-		<h1><a href="/archives.html#{{ post.date | date: '%Y' }}" id="{{ post.date | date: '%Y' }}">Articles in {{ post.date | date: '%Y' }}</a></h1>		
-		<ul class="archive">
-			<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}" id="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a></li>
-			<li class="nested">
-				<ul>
-	{% else %}
-		{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-		{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-		{% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
-		{% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
-		{% if year != nyear %}
-		{% capture month %}December{% endcapture %}
-		{% capture nmonth %}December{% endcapture %}
-				</ul>
-			</li></ul>
-			</div>
-			<div class="box">	
-				<h1><a href="/archives.html#{{ post.date | date: '%Y' }}" id="{{ post.date | date: '%Y' }}">Articles in {{ post.date | date: '%Y' }}</a></h1>		
-				<ul class="archive">
-					<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}" id="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a></li>
-					<li class="nested">
+			{% if post.next %}		
+					{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+					{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+					{% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
+					{% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
+			{% endif %}
+			
+			{% if forloop.first %}	
+					<div class="box">
+						<h1><a href="/archives.html#{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a></h1>		
+						<!-- year -->
+						<ul class="archive">
+							<!-- month -->													
+							<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a>												
+								<ul>			
+			{% else %}
+				<!-- all other posts -->								
+					{% if year != nyear %}	
+								</ul>
+							</li>						
+							<!-- /month -->	
+						</ul>
+					</div>
+					<!-- /year -->
+					<!-- year -->
 						<ul>
-							
-		{% endif %}
-		{% if month != nmonth %} 
-				</ul>
-			</li>
-			<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}" id="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a></li>
-			<li class="nested">
-					<ul>
-		{% endif %}
-		
-   {% endunless %}
-	<li><a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }} <span>{{ post.date | date: '%d.%m' }}</span></a></li>	
-	
-	
-
-{% endfor %}
-	</ul>
-		</li>
-	</ul>	
-</div>
-
+							<!-- month -->													
+							<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a>												
+								<ul>		
+					{% elsif month != nmonth %}
+								</ul>
+							</li>						
+							<!-- /month -->	
+							<!-- month -->
+							<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a>							
+								<ul>												
+					{% endif %}					
+		   {% endif %}	
+		   
+		   <li><a href="/{{ post.url }}">{{ post.title }}</a></li>		
+		   		
+		{% endfor %}
+								</ul>
+							</li>						
+							<!-- /month -->	
+						</ul>
+					</div>
+					<!-- /year -->		
+</section>
 			
