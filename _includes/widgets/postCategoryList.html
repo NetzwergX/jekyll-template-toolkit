@@ -12,7 +12,7 @@
 	<div>Posted in
 		<ul class="inlineList categories">
 			{% for category in post.categories %}
-				<li><a href="categories.html#{{ category | cgi_encode }}">{{ category }}</a>
+				<li><a href="categories.html#{{ category | cgi_escape }}">{{ category }}</a>
 				{% unless forloop.last %},{% endunless %}
 				</li>					
 			{% endfor %}

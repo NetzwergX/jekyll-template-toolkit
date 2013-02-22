@@ -6,9 +6,9 @@ layout: page
 		<time datetime="{{page.date | date: "%Y-%m-%d"}}" title="{{page.date | date: "%Y-%m-%d"}}">{{page.date | date: "%d.%m.%Y"}}</time>					
 		<h1><span>{{ page.title }}</span></h1>	
 	</header>
-	{{ page.excerpt | markdownify }}
+	<p>{{ page.excerpt | markdownify }}</p>
 	<a id="more"></a>
-	{{ content}}
+	{{ content }}
 	<footer>
 		{% assign post = page % %}
 		{% include widgets/postCategoryList.html %}

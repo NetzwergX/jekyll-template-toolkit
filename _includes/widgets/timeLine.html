@@ -52,14 +52,17 @@
 								<ul>												
 					{% endif %}					
 		   {% endif %}	
-		   {% comment %}<li><a href="/{{ post.url }}">{{ post.title }}</a></li>	{% endcomment %}		   		
-		{% endfor %}
-								</ul>
+		   {% comment %}<li><a href="/{{ post.url }}">{{ post.title }}</a></li>	{% endcomment %}
+		   
+		   {% if forloop.last %}
+		  						 </ul>
 							</li>						
 							<!-- /month -->	
 						</ul>
 					</li>
-					<!-- /year -->								
+					<!-- /year -->		
+		   {% endif %}		   		   		
+		{% endfor %}														
 		</ul>		
 	</nav>
 </section>

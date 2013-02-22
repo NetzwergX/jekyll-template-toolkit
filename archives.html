@@ -3,6 +3,7 @@ layout: page
 title: Archives
 ---
 <section>		
+		<ul class="postList archive">
 		{% for post in site.posts %}
 		
 			{% if post.next %}		
@@ -12,13 +13,12 @@ title: Archives
 					{% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
 			{% endif %}
 			
-			{% if forloop.first %}	
-					<div class="box">
-						<h1><a href="/archives.html#{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a></h1>		
-						<!-- year -->
-						<ul class="postList archive">
-							<!-- month -->													
-							<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a>												
+			{% if forloop.first %}				
+					<!-- year -->
+					<li class="box"><h1 id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h1>			
+						<ul>
+							<!-- month -->
+							<li><h2 id="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</h2>				
 								<ul>			
 			{% else %}
 				<!-- all other posts -->								
@@ -27,31 +27,34 @@ title: Archives
 							</li>						
 							<!-- /month -->	
 						</ul>
-					</div>
+					</li>
 					<!-- /year -->
 					<!-- year -->
+					<li class="box"><h1 id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h1>		
 						<ul>
-							<!-- month -->													
-							<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a>												
+							<!-- month -->
+							<li><h2 id="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</h2>						
 								<ul>		
 					{% elsif month != nmonth %}
 								</ul>
 							</li>						
 							<!-- /month -->	
 							<!-- month -->
-							<li><a href="/archives.html#{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</a>							
+							<li><h2 id="{{ post.date | date: '%Y-%B' }}">{{ post.date | date: '%B' }}</h2>						
 								<ul>												
 					{% endif %}					
 		   {% endif %}	
+		   <li><a href="/{{ post.url }}">{{ post.title }}</a></li>
 		   
-		   <li><a href="/{{ post.url }}">{{ post.title }}</a></li>		
-		   		
-		{% endfor %}
-								</ul>
+		   {% if forloop.last %}
+		  						 </ul>
 							</li>						
 							<!-- /month -->	
 						</ul>
-					</div>
+					</li>
 					<!-- /year -->		
+		   {% endif %}		   		   		
+		{% endfor %}														
+		</ul>		
 </section>
 			
