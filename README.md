@@ -1,7 +1,7 @@
 Jekyll Template Toolkit (JTT)
 =============================
 
-*** This is the WIP branch for Jekyll 1.0 compatible templates ***
+** This is the WIP branch for Jekyll 1.0 compatible templates **
 		
 	
 Contribution (Code of conduct)
