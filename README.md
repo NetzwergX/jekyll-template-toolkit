@@ -1,7 +1,10 @@
 Jekyll Template Toolkit (JTT)
 =============================
 
-** This is the WIP branch for Jekyll 1.0 compatible templates **
+
+**This is the WIP branch for Jekyll 1.0 compatible templates!**
+
+Jekyll 1.0 has gotten a whole lot of new features, which allow for some updates of JTT.
 		
 	
 Contribution (Code of conduct)
