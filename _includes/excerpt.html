@@ -1,0 +1,15 @@
+<article itemscope itemtype="http://schema.org/BlogPosting">
+	<header>
+		<time datetime="{{ post.date | date: "%Y-%m-%d" }}" itemprop="datePublished">{{ post.date | date: "%d.%m.%Y" }}</time>
+		<h1 itemprop="headline"><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>		
+	</header>
+	<div itemprop="articleBody" class="link-awesome">
+		{{ post.excerpt }}		
+	</div>
+	<p class="text-right"><em><a href="{{ post.url }}" title="Read more about '{{ post.title }}'">Read more &hellip;</a></em></p>
+	<footer>
+	{% if post.tags != nil || post.category != nil%}	
+		{% include __articleFooter.html %}
+	{% endif %}
+	</footer>
+</article>

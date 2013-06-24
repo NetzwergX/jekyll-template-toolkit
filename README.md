@@ -1,134 +1,61 @@
-Jekyll Template Toolkit (JTT)
-=============================
+[Jekyll Boilerstrap ↗](http://teumert.net/jekyll-template-toolkit/)
+====================================================================
 
-A widget collection for vanilla jekyll, 100% compatible to github-pages.
+A widget collection for vanilla jekyll, 100% compatible to 
+[GitHub Pages](https://pages.github.com).
 
-All widgets / templates work in a vanilla jekyll installation, ensuring that a site that is built with these 
-templates can also sucessfully be built on GitHub. This makes JTT a very useful toolkit for the use
-with GitHub Pages.
+Jekyll-Boilerstrap (J-BS) is the sucessor to Jekyll-Template-Toolkit (JTT). It is
+partially inspired by Jekyll-Bootstrap and aims at providing a solid alternative
+since Jekyll-Bootstrap is not longer actively developed. The goal of Jekyll
+Boilerstrap is to provide a quick start into blogging with Jekyll, without
+much hassle, so that the blogger can focus on creating content instead of
+building a working page.
 
-You can confirm this locally by running
-	
-		jekyll --safe
+Jekyll-Boilerstrap delivers boilerplate templates for the use with Jekyll,
+without using any plugins, therefore sites using Jekyll-Boilerstrap can be
+pushed directly to GitHub and will be build automatically.
 
-Each widget is a self-contained piece of code that can simply be included via 
+Jekyll-Boilerstraps templates are furthermore compatible with Twitter-Bootstrap,
+and using Twitter-Bootstrap is highly recommended.
 
-		{% include widgets/widget.html %}. 
-	
-There are also some predefined boilerplate pages and layouts that make the day-to-day work with 
-jekyll much easier. feel free to use and adapt them for your own blog.
+Optionally, use of those thrid party tools is recommended and natively
+supported by Jekyll-Boilerstrap:
 
-The HTML markup used in all files is HTML5. I tried to use it as semantically correct as possible.
-If you find any mistakes, please open an issue or fork & submit a pull request as fix.
-		
-	
-Getting started
----------------
+* JQuery
+* HTML5Shiv
+* Font-Awesome
+* Link-Awesome
 
-You can copy-paste everything you need from the repo, but the recommended way is to clone the repo via
-
-		git clone git://github.com/NetzwergX/jekyll-template-toolkit.git
-		
-The latest code is kept in the `jtt-source` branch. This avoids conflicts with the `master` branch when 
-you are trying to create user pages.
+Furthermore, Jekyll-Boilerstrap uses semantic HTML5 and marks up microdata
+using the schema.org microdata vocabulary.
 
 
-Widgets
+Current state
+-------------
+
+The `jekyll-boilerstrap` will always contain the latest stable release.
+As of now, it is subject to **heavy and rapid changes**. Once Jekyll-Boilerstrap
+1.0.0 is released, new versions will be developed in `jbs-X.X.X-WIP` branches.
+Once those branches are stable, they will be merged into `jekyll-boilerstrap`
+and be appropriately tagged. There is no `master`-branch to ease the use of J-BS
+with project pages.
+
+
+
+LICENSE
 -------
+The documentation of Jekyll Boilerstrap residing in the `gh-pages` branch,
+and online available at <http://teumert.net/jekyll-boilerstrap> is licensed 
+under [CC-BY-3.0](http://creativecommons.org/licenses/by/3.0/) license.
 
-Widgets are located inside the `_includes/widgets/` folder.
+Jekyll Boilerstrap itself is released under the following license:
 
-* **Category List** (categoryList.html)
-	A simple list containing all categories and the number of posts in them.
-	Useful for navigations e.g. in sidebars.
+---
 
-* **Post Timeline** (timeLine.html)
-	A time line containing all month in which posts were published, grouped by year.
-	Useful for navigations e.g. in sidebars.
-
-* **Tag Cloud** (tagCloud.html)
-	A linear weighted tag cloud. 
-	
-* **Similar posts list** (similarPostList.html)
-	A list containing similar posts.
-	Useful to provide some "Further reading" links to the user. Only works on post pages.
-	
-* **Google Search box** (googleSearchForm.html)
-	A very simple search box with an input field and submit button. searches via google.	
-		
-Planned widgets (WIP)
-	
-* **Tapir search box**
-	A search box for searching the site via Tapir (<http://tapirgo.com/>).	
-		
-Pages
------
-
-Pages are located directly inside the root folder.
-
-* **Category Page** (categories.html)
-	A page listing all posts grouped by category.
-	Has anchors in order to jump to a specific category directly.
-
-* **Archive Page** (archive.html)
-	A page listing all posts grouped by year and month.
-	Has anchors in order to jump to a specif month or month-year combination directly.
-	
-* **Tag Page** (tags.html)
-	A page listing all posts grouped by tags.
-	Provides anchors to jump to a specific tag easily.	
-
-* **Full Feed Page** (fullFeed.xml)
-	Provides an RSS 2.0 Feed containing all posts.	
-	
-* **Feed Page** (fullFeed.xml)
-	Provides an RSS 2.0 Feed containing the X latest posts. Defaults to 5.	
-		
-Layouts
--------
-
-Layout are located inside the `_layouts/` folder.
-
-* **Page** (page.html)
-	Boilerplate base layout for all layouts.
-	
-* **Index** (index.html)
-	Index page rendering post list with pagination.
-	
-* **Article** (article.html)
-	Post page showing one post.
-	
-* **Feed** (feed.xml)
-	Base layout for RSS 2.0 feeds.
-		
-	
-Contribution (Code of conduct)
-------------------------------
-
-**Contribution is highly encouraged**. If you think you found a great piece code that is useful
-for jekyll users, feel free to contribute!
-
-There are some rules though:
-	
-* Do not spam-commit. Use a sensible # of commits.
-* Split logical changes into separate commits, avoid gigantic commits.
-* Write meaningful commit messages
-* Avoid lines with more then 100 characters wherever possible.
-* Use **tabs** for indentation, spaces for alignment.
-* Do not harm anyone while using or contributing to this software
-		
-More information
-----------------
-
-Updates on JTT and articles about blogging on github-pages can be found regularly
-[on my blog at teumert.net](http://www.teumert.net/).
-
-		
-License
--------
 (The MIT License)
 
-Copyright (c) 2012 Sebastian Teumert (<http://www.teumert.net>, <http://github.com/NetzwergX>)
+Copyright (c) 2012-2013 Sebastian Teumert 
+	(<http://www.teumert.net>, <http://github.com/NetzwergX>)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the 'Software'), to deal

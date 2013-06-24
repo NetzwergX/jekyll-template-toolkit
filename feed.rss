@@ -1,0 +1,33 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title><![CDATA[{{ site.title }}]]></title>
+		<link><![CDATA[{{ site.url }}]]></link>
+		<description><![CDATA[{{ site.description }}]]></description>
+		<language>en</language>
+		<copyright><![CDATA[&copy; {{ site.time | date:"%Y" }} {{site.url}}. All rights reserved.]]></copyright>
+		<pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+		{% for post in site.posts %}
+			<item>
+				<title><![CDATA[{{ post.title }}]]></title>
+				<description>
+					<![CDATA[
+						{{ post.excerpt | markdownify }}
+						{% if post.categories.size > 0 %}						
+							<p>Posted in: {{ post.categories | array_to_sentence_string }}</p>
+						{% endif %}		
+						{% if post.tags.size > 0 %}
+							<p>Tagged with: {{ post.tags | array_to_sentence_string }}</p>
+						{% endif %}		
+					]]>
+				</description>
+				<link><![CDATA[{{site.url}}{{ post.url }}]]></link>
+				<author><![CDATA[{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}]]></author>
+				<guid><![CDATA[{{ post.url }}]]></guid>
+			</item>
+		{% endfor %}
+	</channel>
+</rss>

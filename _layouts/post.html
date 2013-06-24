@@ -1,0 +1,27 @@
+---
+layout: page
+---
+{% capture pager %}
+<ul class="pager">
+	{% if page.next %}
+		<li class="previous"><a href="{{ page.next.url }}">&larr; {{ page.next.title }}</a></li>
+	{% else %}
+		<li class="previous disabled"><span>&larr; Newer</span></li>
+	{% endif %}
+	
+	<li><a href="categories.html"> — Categories — </a></li>
+	
+	{% if page.previous %}
+		<li class="next">
+			<a href="{{ page.previous.url }}">{{ page.previous.title }} &rarr;</a>
+		</li>
+	{% else %}
+		<li class="next disabled"><span>Newer &rarr;</span></li>
+	{% endif %}	
+</ul>
+{% endcapture %}
+
+{{ pager }}
+{% assign post = page % %}
+{% include article.html %}
+{{ pager }}

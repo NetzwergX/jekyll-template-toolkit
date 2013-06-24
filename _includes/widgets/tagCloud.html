@@ -13,9 +13,9 @@
 	
 	For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-toolkit>.
 {% endcomment %}
-<section>
-	<h1>Tags<span class="hint">({{site.tags.size}})</span></h1>		
-	<ul class="tagCloud">
+<li class="nav-header"><h4>Tags <span class="pull-right">({{site.tags.size}})</span></h4></li>
+<li>
+	<ul class="inline">
 	   {% for tag in site.tags %}      
 	   <li>
 	   	<a href="tags.html#{{ tag | first | cgi_encode }}" 
@@ -25,7 +25,7 @@
 	</li>
 	{% endfor %}    
 	</ul>
-</section>
+</li>
 
     
    
