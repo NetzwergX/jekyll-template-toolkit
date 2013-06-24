@@ -1,0 +1,14 @@
+<article itemscope itemtype="http://schema.org/BlogPosting">
+	<header>
+		<time datetime="{{ post.date | date: "%Y-%m-%d" }}" itemprop="datePublished">{{ post.date | date: "%d.%m.%Y" }}</time>
+		<h1 itemprop="headline">{{ page.title }}</h1>		
+	</header>
+	<div itemprop="articleBody" class="link-awesome">
+{%	%}{{ post.content }}
+	</div>
+	<footer>
+	{% if post.tags != nil || post.category != nil%}	
+		{% include __articleFooter.html %}
+	{% endif %}
+	</footer>
+</article>
