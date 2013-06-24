@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% if page.lang %}{{ page.lang }}{% elseif site.lang %}{{ site.lang }}{% else %}en{% endif %}">
+<html lang="{% if page.lang %}{{ page.lang }}{% else if site.lang %}{{ site.lang }}{% else %}en{% endif %}">
 <head>
 	<meta charset="utf-8" />
 	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->	
@@ -13,19 +13,19 @@
 	<!-- Meta Information -->
 	<title>	{{ page.title }}
 			{% if paginator != nil && paginator.page %} &ndash; Page {{ paginator.page}}{% endif %}
-			{% if site.title %} &ndash;  {{ site.title }}
+			{% if site.title != nil %}{% if page.title != nil %} &ndash; {% endif %}{{ site.title }}{% endif %}
 	</title>
-	{% if page.description %}
+	{% if page.description != nil %}
 	<meta name="description" content="{{ page.description }}" />
-	{% elseif page.excerpt %}
+	{% else if page.excerpt =0 nil %}
 	<meta name="description" content="{{ page.excerpt }}" />
 	{% endif %}
-	{% if page.tags %}
+	{% if page.tags != nil%}
 	<meta name="keywords" content="{{ page.tags | array_to_sentence_string }}" />
 	{% endif %}
-	{% if page.author %}
+	{% if page.author != nil %}
 	<meta name="author" content="{{ page.author }}" />
-	{% elseif site.author %}	
+	{% else if site.author !0 nil %}	
 	<meta name="author" content="{{ site.author }}" />
 	{% endif %}
 	
@@ -34,7 +34,7 @@
 	<meta name="MobileOptimized" content="320" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	{% if site.favicon %}
+	{% if site.favicon != nil %}
 	<!--Favicon -->
 	<link rel="shortcut icon" href="{{ site.favicon }}" />
 	<link rel="icon" type="image/x-icon" href="{{ site.favicon }}" />
@@ -46,11 +46,10 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/icons/apple-touch-icon-72.png" />
     <link rel="apple-touch-icon-precomposed" href="assets/icons/apple-touch-icon-57.png" />-->
 
-	{% if page.feed %}
+	{% if page.feed != nil %}
 	<!-- feed -->
 	<link rel="feed alternate" type="application/atom+xml" href="{{ page.feed }}" title="News Feed &ndash; {{ page.title }}">
-	{% elseif %}
-	{% if page.feed %}
+	{% else if site.feed != nil %}
 	<!-- feed -->
 	<link rel="feed alternate" type="application/atom+xml" href="{{ site.feed }}" title="News Feed &ndash; {{ site.title }}">
 	{% endif %}
@@ -63,10 +62,10 @@
 	<!-- Font Awesome Font Icons -->
 	<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
 	
-	{% if page.theme %}		
+	{% if page.theme != nil %}		
 	<!-- Website Style -->
 	<link href="assets/themes/{{page.theme}}/{{page.theme}}.css" rel="stylesheet" />
-	{% elseif site.theme %}
+	{% else if site.theme != nil %}
 	<link href="assets/themes/{{site.theme}}/{{site.theme}}.css" rel="stylesheet" />
 	{% endif %}
 	<!-- TODO: dev setting and less support? -->
@@ -91,7 +90,7 @@
 	
 </head>
 
-<body class="container">
+<body>
 	<header id="header">
 		{% include header.html %}
 	</header>	
