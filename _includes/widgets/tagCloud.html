@@ -1,31 +1,17 @@
 {% comment %}
-	Linear weighted tag cloud for Jeykll
-	
-	Author: Sebastian Teumert (<http://www.teumert.net>, <http://www.github.com/NetzwergX>)
-	
-	This tag cloud uses a quite simple linear progression in order to weight tags. 
-	For greater tag cloud, a logarithmic approach will give better results. In this tag cloud,
-	100% is the base, and every tag gets additional wheight according to the number of times it 
-	is used in posts.
-	
-	Calculating more complex equasions is made difficult by the fact that Liquid does not support
-	math very well and you have to use filters.
-	
-	For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-toolkit>.
+	(c) 2012-2013 Sebastian Teumert (<http://www.teumert.net>, <http://www.github.com/NetzwergX>)
+	http://teumert.net/jekyll-template-toolkit/docs/widgets/#tagCloud.html	
 {% endcomment %}
-<li class="nav-header"><h4>Tags <span class="pull-right">({{site.tags.size}})</span></h4></li>
-<li>
-	<ul class="inline">
-	   {% for tag in site.tags %}      
-	   <li>
-	   	<a href="tags.html#{{ tag | first | cgi_encode }}" 
-	   	style="font-size:{{tag | last | size | times:100 | divided_by:site.tags.size | plus:100}}%">
-		{{ tag | first }}</a>
-		{% unless forloop.last %}, {% endunless %}
-	</li>
-	{% endfor %}    
-	</ul>
+<ul class="inline">
+   {% for tag in site.tags %}      
+   <li>
+   	<a href="tags.html#{{ tag | first | uri_escape }}" 
+   	style="font-size:{{ tag | last | size | times:100 | divided_by:site.tags.size | plus:100 }}%">
+	{{ tag | first }}</a>
+	{% unless forloop.last %}, {% endunless %}
 </li>
+{% endfor %}    
+
 
     
    

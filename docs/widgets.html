@@ -1,0 +1,49 @@
+---
+title: Pages
+layout: content
+---
+<div class="rainbowkeh">
+	<div class="container">
+		<!-- Jumbotron -->
+		<div class="jumbotron subhead">
+			<h1>Widgets</h1>
+			<p class="lead">Small widgets that can be included anywhere</p>			
+		</div>
+	</div>
+</div>
+
+<div class="container container-docs">
+	<div class="row">
+		<div class="span3">
+			<ul class="nav nav-tabs nav-stacked nav-docs">				
+				<li><a href="#sidebar">Sidebar <i class="icon-chevron-right"></i></a></li>			
+				<li><a href="#tagcloud">Tag Cloud <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#timeline">Timeline <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#catlist">Category List<i class="icon-chevron-right"></i></a></li>
+				<li class="nav-header">Navigation</li>							
+				<li><a href="#pagination">Pagination <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#pager">Pager <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#nav">Navigation <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#navbar">Navbar <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#breadcrumbs">BreadCrumbs <i class="icon-chevron-right"></i></a></li>
+				<li class="nav-header">Post</li>
+				<li><a href="#excerpt">Post Excerpt <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#post">Full Post <i class="icon-chevron-right"></i></a></li>				
+			</ul>
+		</div>
+		
+		<div class="span9">			
+			<p class="alert alert-info">Some widgets require certain Jekyll settings to be set properly, others offer custom settings that can be configured through custom variables. Please check the list of settings for each widget.</p>		
+			<section>
+				<h2>Tag Cloud</h2>				
+				<p>	Linear weighted tag cloud.</p>
+				<small>See <a href="http://teumert.net/2012-08-28-tag-cloud-with-jekyll.html">Tag cloud in Jekyll</a> for details.</small>
+				<pre>{% raw %}{% include widgets/tagCloud.html %}{% endraw %}</pre>	
+				<div class="well well-transparent">{% include widgets/tagCloud.html %}</div>			
+			</section>
+			
+			
+		</div>
+	</div>
+</div>
+

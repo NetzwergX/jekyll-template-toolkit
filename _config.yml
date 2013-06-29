@@ -1,7 +1,7 @@
 permalink: /:year-:month-:day-:title.html
 paginate: 5
 url: http://localhost:4000
-exclude: [README.md]
+exclude: [README.md, _themes]
 timezone: Europe/Berlin
 markdown: redcarpet
 redcarpet:

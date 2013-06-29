@@ -1,0 +1,87 @@
+---
+title: Pages
+layout: content
+---
+<div class="rainbowkeh">
+	<div class="container">
+		<!-- Jumbotron -->
+		<div class="jumbotron subhead">
+			<h1>Pages</h1>
+			<p class="lead">List of pages included in Jekyll Boilerstrap</p>			
+		</div>
+	</div>
+</div>
+
+<div class="container container-docs">
+	<div class="row">
+		<div class="span3">
+			<ul class="nav nav-tabs nav-stacked nav-docs">
+				<!--<li class="nav-header">Indexing pages</li>-->
+				<li><a href="#feeds">Post Index <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#feeds">Post Archive (time-based) <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#feeds">Category List <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#feeds">Tag List <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#feeds">User Sitemap <i class="icon-chevron-right"></i></a></li>			
+				<li class="nav-header">XML-based meta pages</li>
+				<li><a href="#feeds">Atom-Feed <i class="icon-chevron-right"></i></a></li>
+				<li><a href="#feeds">RSS-Feed <i class="icon-chevron-right"></i></a></li>
+				<li class="divider"></li>
+				<li><a href="#sitemap">Sitemap <i class="icon-chevron-right"></i></a></li>
+			</ul>
+		</div>
+		
+		<div class="span9">			
+			<p class="alert alert-info">Some pages require certain Jekyll settings to be set properly, others offer custom settings that can be configured through custom variables. Please check the list of settings for each page. If you use the <code>_config.yml</code> deployed within J-BS, all pages should work <em>out of the box</em>.</p>
+		
+			<section id="indexing">
+				<div class="page-header">
+					<h1>Indexing pages</h1>					
+				</div>	
+								
+				<h2>Post Index</h2>				
+				<p>	List of all posts sorted by their publishing date in descending order. Optional pagination available.</p>			
+				<pre>paginate: 5 		# needs to be positive non-zero value
+pagination: pager 	# possible values are pager | pagination</pre>
+				<p class="text-right"><a class="btn" href="#">Example page &raquo;</a></p>
+					
+				<h2>Post Archive</h2>
+				<p>	List of all posts sorted by their publishing date in descending order, grouped by month and year.</p>	
+				<p class="text-right"><a class="btn" href="#">Example page &raquo;</a></p>
+				
+				<h2>Category List</h2>
+				<p>List of posts grouped by category.</p>	
+				<p class="text-right"><a class="btn" href="#">Example page &raquo;</a></p>
+				
+				<h2>Tag List</h2>
+				<p>List of posts grouped by tags.</p>	
+				<p class="text-right"><a class="btn" href="#">Example page &raquo;</a></p>
+				
+				<h2>User sitemap</h2>
+				<p>List of all pages rendered by Jekyll.</p>	
+				<p class="text-right"><a class="btn" href="#">Example page &raquo;</a></p>					
+			</section>
+			
+			<section id="meta">
+				<div class="page-header">
+					<h1>XML-based meta pages</h1>
+				</div>
+				
+				<h2>Atom-Feed</h2>
+				<p>List of posts as Atom-Feed.</p>	
+				<p class="text-right"><a class="btn" href="#">Example page &raquo;</a></p>
+				
+				<h2>RSS-Feed</h2>
+				<p>List of posts as RSS-Feed.</p>	
+				<p class="text-right"><a class="btn" href="#">Example page &raquo;</a></p>
+				
+				<h2>Sitemap</h2>
+				<p>Sitemap 0.90 protocol compliant XML sitemap. Useful e.g. for search engines.</p>
+				<p><small>See <a href="http://www.sitemaps.org/protocol.html">http://www.sitemaps.org/protocol.html</a> for details.</small></p>	
+				<p class="text-right"><a class="btn" href="#">Example page &raquo;</a></p>				
+			</section>
+			
+			
+		</div>
+	</div>
+</div>
+

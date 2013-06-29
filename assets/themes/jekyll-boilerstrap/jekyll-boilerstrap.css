@@ -43,6 +43,16 @@
 	margin-top: 28px;
 }
 
+.container-docs {
+	margin-top: 2em;
+}
+
+.nav-docs i.icon-chevron-right {
+	margin-top: 4px; 
+	opacity: .4;
+	float: right;
+}
+
 /*
  * http://lea.verou.me/css3patterns/#rainbow-bokeh
  */

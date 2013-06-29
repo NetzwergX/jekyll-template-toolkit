@@ -9,7 +9,7 @@ title: Tags
 	<ul class="inline">
 	   {% for tag in site.tags %}      
 	   <li>
-	   	<a href="tags.html#{{ tag | first | cgi_encode }}" 
+	   	<a href="tags.html#{{ tag | first | uri_escape }}" 
 	   	style="font-size:{{tag | last | size | times:100 | divided_by:site.tags.size | plus:100}}%">
 		{{ tag | first }}</a>
 		{% unless forloop.last %}, {% endunless %}
@@ -20,7 +20,7 @@ title: Tags
 <!-- tags -->	
 {% for tag in site.tags %}
 	<li class="nav-header">
-		<h1>{{ tag | first }}<a name="{{ tag | first | cgi_escape }}"></a><small class="pull-right">({{tag | last | size}})</small></h1>
+		<h1>{{ tag | first }}<a name="{{ tag | first | uri_escape }}"></a><small class="pull-right">({{ tag | last | size }})</small></h1>
 	</li>	
 	{% assign posts = tag | last %}
     	{% for post in posts %}

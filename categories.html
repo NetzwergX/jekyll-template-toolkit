@@ -6,7 +6,7 @@ title: Categories
 <ul class="nav nav-list">
 <!-- categories -->	
 {% for category in site.categories %}
-	<li class="nav-header"><h2>{{ category | first }}<a name="{{ category | first | cgi_escape }}"></a><small class="pull-right">({{ category | last| size }})</small></h2></li>
+	<li class="nav-header"><h2>{{ category | first }}<a name="{{ category | first | uri_escape }}"></a><small class="pull-right">({{ category | last| size }})</small></h2></li>
 	
 		{% assign posts = category | last %}
       {% for post in posts %}
