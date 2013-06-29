@@ -1,0 +1,14 @@
+<script src="assets/js/jekyll-boilerstrap.js" type="text/javascript"></script>
+<script type="text/javascript">
+var codeNode = $("#installcode");
+var code = codeNode.text();    	
+$("#installform").submit(function(e){    		
+	var username = $("#ghuser").val();
+	if ($.trim(username) !== ""){ 
+	codeNode.text(code.replace(/Username/g, username));     
+	} // TODO: else display error?  
+
+ e.preventDefault();
+return false;
+});
+</script>

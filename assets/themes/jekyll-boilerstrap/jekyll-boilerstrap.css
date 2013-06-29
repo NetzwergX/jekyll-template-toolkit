@@ -4,16 +4,30 @@
 }
 /* Main marketing message and sign up button */
 .jumbotron {
-	margin: 80px 0;
+	margin: 80px 0 40px 0;	
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+}
+.jumbotron.masthead {
 	text-align: center;
 }
-.jumbotron h1 {
+.jumbotron.subhead {	
+	text-align: left;
+}
+.jumbotron.masthead h1 {
 	font-size: 100px;
-	line-height: 1;
+	line-height: 1;	
+}
+.jumbotron.masthead h1 {
+	font-size: 60px;
+	line-height: 1;	
 }
 .jumbotron .lead {
 	font-size: 24px;
 	line-height: 1.25;
+}
+.jumbotron p a {
+	color:#00baff;
 }
 .jumbotron .btn {
 	font-size: 21px;
@@ -27,4 +41,20 @@
 }
 .marketing p + h4 {
 	margin-top: 28px;
+}
+
+/*
+ * http://lea.verou.me/css3patterns/#rainbow-bokeh
+ */
+.rainbowkeh {
+	background: 
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+		linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
+		background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+		background-color: #840b2a;
 }

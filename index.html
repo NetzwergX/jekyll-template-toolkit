@@ -1,18 +1,30 @@
 ---
 layout: page
 ---
-<div class="container">
-	<!-- Jumbotron -->
-	<div class="jumbotron">
-		<h1>Jekyll Boilerstrap</h1>
-		<p class="lead">A blogging toolkit for static sites, 100% compatible to <a href="">GitHub Pages.</a>.</p>
-		<p>Built on top of Twitter-Bootstrap & Jekyll, utilizies Font-Awesome.</p>
-		<a class="btn btn-large btn-success" href="#">Start blogging</a>
+<div class="rainbowkeh">
+	<div class="container">
+		<!-- Jumbotron -->
+		<div class="jumbotron masthead">
+			<h1>Jekyll Boilerstrap</h1>
+			<p class="lead">A blogging toolkit for static sites, 100% compatible to <a href="">GitHub Pages</a>.</p>
+			<p>Built on top of Twitter-Bootstrap & Jekyll, utilizies Font-Awesome.</p>
+			<a class="btn btn-large btn-success" href="https://github.com/NetzwergX/jekyll-template-toolkit/archive/jekyll-boilerstrap.zip">Download</a>
+		</div>
 	</div>
-
-	<hr>
-
-	<!-- Example row of columns -->
+</div>
+<div class="container" style="margin-top: 40px;">	
+	<form class="form-inline" id="installform">
+		<input type="text" class="input-medium" placeholder="User Name" id="ghuser">					
+		<button type="submit" class="btn">Create my install code</button>
+		<span class="help-inline"> or </span> 
+		<a class="btn btn-primary" href="https://github.com/NetzwergX/jekyll-template-toolkit/fork" target="_blank">Fork</a>				
+	</form>					
+	<pre id="installcode">$ git clone https://github.com/NetzwergX/jekyll-boilerstrap.git Username.github.io
+$ cd Username.github.io
+$ git remote set-url origin git@github.com:Username/Username.github.io
+$ git push origin master</pre>				
+	<section>
+	<!-- Marketing rows -->
 	<div class="row-fluid marketing">
 		<div class="span4">
 			<h2>Hosting on GitHub</h2>
@@ -30,10 +42,12 @@ layout: page
 		<div class="span4">
 			<h2>Features</h2>
 			<p>Jekyll Boilerstrap offers a great variety of widgets, templates and layouts for the
-			 day-to-day needs of bloggers. You can find many planned features in the <a href="">Roadmap</a>.</p>
+			 day-to-day needs of bloggers. More (planned) features, e.g. command line tools, 
+			 using the GitHub CRUD API via JS, including comments from various sources etc. can be
+			 found in the <a href="">Roadmap</a>.</p>
 			<p><a class="btn" href="#">View details &raquo;</a></p>
 		</div>
 	</div>
-
+	</section>
 	<hr>
 </div>
